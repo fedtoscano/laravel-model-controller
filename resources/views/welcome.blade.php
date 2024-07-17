@@ -13,6 +13,8 @@
         <h1>Hello World!</h1>
     </div>
 
+    @dump($movies);
+
     <img src="{{ Vite::asset('resources/img/happycat.jpeg')}}" alt="">
 </body>
 </html>

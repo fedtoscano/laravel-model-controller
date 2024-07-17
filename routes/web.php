@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\Guest\PageController as PageController;
+use App\Http\Controllers\Guest\MovieController as MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/movies', [MovieController::class, 'index'])->name("guest.movies");
