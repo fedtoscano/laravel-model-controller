@@ -9,14 +9,17 @@
     @vite('resources/js/app.js')
 </head>
 <body>
-    <div>
-        <h1>Movies</h1>
-    </div>
+    <header>
+        <div class="container-fluid bg-primary p-4 mb-3 text-white">
+            <h1 class="text-center">Movies</h1>
+
+        </div>
+    </header>
 
 <div class="container">
     <div class="row">
         @foreach ($movies as $movie )
-            <div class="card mb-3 mx-3" style="width: 18rem;">
+            <div class="card mb-3 mx-3 bg-info text-white" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{$movie->title}}</h5>
                     <h6 class="card-subtitle mb-2 text-muted"><strong>Titolo originale:</strong> {{$movie->original_title}}</h6>
